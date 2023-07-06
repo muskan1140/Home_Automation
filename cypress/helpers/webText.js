@@ -13,7 +13,33 @@ class WebText {
             cy.log("--->Error: The text of the element couldn't be captured due to: " + err);
         }
     }
+    
+    shouldBeVisible(element, text) {
+        cy.get(element).should('be.visible', text).then(function (text) {
+            cy.log("element should be visible:" + text);
 
+        },
+            function (err) {
+                cy.log("--->Error: element shouldn't be visible" + err);
+            });
+    }
+
+    trigger(element) {
+        cy.get(element).trigger("mouseover").then(function() {
+            cy.log("Element is trigger");
+        }), function (err) {
+            cy.log("Element is not triggered")
+        }
+    }
+
+    scrollIntoView(element) {
+        cy.get(element).scrollIntoView().then(function() {
+            cy.log("Element is scrolled");
+        }), function (err) {
+            cy.log("Element is not scrolled")
+        }
+    }
+    
     shouldHaveText(element, text) {
         element.should('have.text', text).then(function (text) {
             cy.log("The element is have: " + text);

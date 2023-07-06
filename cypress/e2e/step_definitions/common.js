@@ -1,46 +1,42 @@
 import {Given,When,Then} from "@badeball/cypress-cucumber-preprocessor";
-import LoginPage from '../../pageObject/login';
-import DashBoardPage from "../../pageObject/dashboard";
-import CommonFile from "../../pageObject/commonFile";
-import Decryption from "../../utilities/decryption";
+import GenericActions from "../../utilities/genericActions";
+import WebText from "../../helpers/webText";
+import locators from "../../pages/Locators.json";
+import WebButton from "../../helpers/webButton";
 
-const loginPage = new LoginPage();
-const dashboard = new DashBoardPage();
-const commonFile = new CommonFile();
-const decode = new Decryption();
+const actions = new GenericActions();
+const webText = new WebText();
+const webButton = new WebButton;
 
-Given("I am on the login page", () => {
-    loginPage.visit()
+Then('I should navigate to {string} page',(text)=>{
+    actions.getTitle(text)
 });
 
-
-When("I click on the {string} button", (label) => {
-    loginPage.clickButtonByVisibleText(label)
+When('I click on the {string}',(element)=>{
+    webButton.focusClick(locators[element])
 });
 
-Then("I should see {string} message on the page", (text) => {
-    loginPage.checkTextVisibility(text)
+When('I hover over {string} on the {string}',(element,text)=>{
+    actions.hover(locators[element],text)
+})
+
+Then('I should see the {string} on the {string}',(element,text) => {
+    webText.shouldBeVisible(locators[element],text)
 });
 
-
-// Given("I login to the dashboard with {string} credentials",(user) => {
-//     loginPage.iloginWithAdminCredentials(user)
-// });
-
-When("I fill {string} on the {string} input field",function(string1,string2){
-    let decodedText = decode.getDecodedString(string1);
-    commonFile.iEnterValue(string2,decodedText)
+When('I click on the {string} tab on the header',(element)=>{
+    webButton.click(locators[element])
 });
 
-
-When("I check the {string} checkbox",function(string){
-    commonFile.iCheckedCheckBox(string)
+Then('I click on the {string} on the {string}',(element,text)=>{
+    webButton.click(locators[element],text)
 });
 
-Then("I should navigate to the {string} dashboard page", (text) => {
-    loginPage.checkUrlContainsText(text)
+When('I check the {string} on the {string}',(element,text)=>{
+    webButton.click(locators[element],text)
 });
 
-Then("I should see {string} heading on the page", (text) => {
-    loginPage.checkTextVisibility(text)
+Then('I click on the {string} star on the {string} question',(text,element)=>{
+   webButton.click(locators[element],text)
 });
+

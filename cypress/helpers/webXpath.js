@@ -1,20 +1,20 @@
 class WebXpath {
  
-    setXpathValue(type,word){
+    setXpathValue(word,type="visibleText"){
         
         let xpathString = '';
 
         if(type === 'name' || type === 'id' || type === 'class'){
             xpathString = `//*[contains(@${type},'${word}')]`
         }
-        else if(type === 'visibleText'){
+        else{
             xpathString = `//*[contains(text(),'${word}')]`
         }
 
         return xpathString;
     }
 
-    clickByXpath(type,element){
+    clickByXpath(element,type){
         let getXpathValue = this.setXpathValue(type,element);
         cy.xpath(getXpathValue).click().then(function () {
             cy.log("The element got clicked.");
