@@ -15,7 +15,6 @@ const webElement = new WebElement();
 const webTextBox = new WebTextBox();
 const webSelectBox = new WebSelectBox();
 
-
 Given('I am on the {string} page',(url)=>{
     actions.visit(Urls[url])
 });
