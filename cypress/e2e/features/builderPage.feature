@@ -2,7 +2,6 @@ Feature: Builder Page
 
     As a tester, I want to test the builder page of the homebazaar application
 
-    #calculate emi functionality not working, right the code for that
     Background:
         Given I am on the "builder" page
 
