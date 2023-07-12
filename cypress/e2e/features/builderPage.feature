@@ -77,7 +77,7 @@ Feature: Builder Page
 
     # //--------------------------------------------------------------------------------------------------------------------------------------------
     
-     @automated @builderPage-08 @automated
+    @automated @builderPage-08 @automated
     Scenario: Builder Page - checking the visibility of items on the property card
         Then I should see the "property Name" on the "property card"
         And I should see the "builderName" on the "property card"
@@ -93,7 +93,7 @@ Feature: Builder Page
 
     # //------------------------------------------------------------------------------------------------------------------------------------------------
 
-     @automated @builderPage-9 @automated
+    @automated @builderPage-9 @automated
     Scenario: Builder Page - Instant Call Back Form
         When I click on the "instant Call Back Button" on the "property card"
         Then I should see the "schedule Tour Modal" on the "page"
@@ -163,6 +163,7 @@ Feature: Builder Page
             | Pune   | Pune North     | Hinjewadi |
 
     # //------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
     @automated @builderPage-14 @automated
     Scenario Outline: Builder Page - Recommended Filter for <filter> filter
         When I select "<filter>" from "Recommended" select field
