@@ -19,25 +19,14 @@ Given('I am on the {string} page',(url)=>{
     actions.visit(Urls[url])
 });
 
-When('I click on {string} on {string}', (string,element) => {
-    const locator =locators[element].toString();
-    const str = locator.replace("city",string)
-    webButton.focusClick(str)
-});
-
-Then('I should see the red {string}',(element)=>{
+Then('I should see the red {string} on the {string}',(element)=>{
     webText.shouldBeVisible(locators[element])
-});
-
-Then('I should not see the {string} on the page', (element) => {
-    webElement.elementIsPresent(locators[element])
 });
 
 When('I fill {string} on the {string} on the {string}', (text,element) => {
     if (text == 'data'){
     webTextBox.typeText(locators[element],text)
     }
-        
     else if(text == 'random number') {
         webTextBox.typeText(locators[element], actions.generateMobileNumber(text))   
     }
@@ -51,16 +40,14 @@ Then('I select {string} from {string} on the {string}',(text,element)=>{
     webButton.click(locators[element])
     }else if (text=='time'){
     webSelectBox.selectDropDownUsingText(locators[element], '01:00 pm')
+    }else if (text == 'first option'){
+    webSelectBox.selectDropDownUsingText(locators[element], 'Lodha Enchante')   
     }
 });
 
 When ('I navigate to the {string}', (element) => {
     cy.scrollTo('center',{force:true})
     webText.scrollIntoView(locators[element])
-});
-
-Then('I should see the {string}',(element)=>{
-    webText.shouldBeVisible(locators[element])
 });
 
 Then('I click on the {string} on you Know {string}',(string,element) =>{

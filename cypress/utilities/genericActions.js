@@ -1,7 +1,7 @@
 class GenericActions {
 
-    visit(){
-        cy.visit("/");
+    visit(url){
+        cy.visit(url);
     }
 
     wait(time){
@@ -17,6 +17,10 @@ class GenericActions {
             cy.log("--> Error: The Element is not Triggered")
         });
     }
+
+    getUrl(){
+     cy.url().then(text => cy.log(text))
+     }
 
     checkUrl(url){
         cy.url().should('contains', url).then( function(){

@@ -20,7 +20,7 @@ module.exports = defineConfig({
       return config;
     },
     specPattern: "cypress/e2e/features/*.feature",
-    baseUrl: "https://www.homebazaar.com/buy/lodha-codename-premier-property-dombivali-mumbai-4620",
+    baseUrl: "https://www.homebazaar.com",
     chromeWebSecurity: false,
     chromeWebSecurity: false,
     viewportHeight: 900,

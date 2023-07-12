@@ -36,14 +36,14 @@ Feature: Property Detail Page
     @regression @buyPDPPage-03 @automated
     Scenario: Buy Property Detail Page - checking the functionality of shortlist property icon
         When I click on the "shortlist Property Icon"
-        Then I should see the red "shortlist Property Icon"
+        Then I should see the red "shortlist Property Icon" on the "page"
 
     # //-------------------------------------------------------------------------------------------------------------
 
     @regression @buyPDPPage-04 @automated
     Scenario: Buy Property Detail Page - checking the functionality of share icon
         When I click on the "share Icon"
-        Then I should see the "social media icon" modal on the page
+        Then I should see the "social Media Icon Modal" on the "page"
 
     # //--------------------------------------------------------------------------------------------------------------
 
@@ -59,9 +59,9 @@ Feature: Property Detail Page
 
     @regression @buyPDPPage-06 @automated
     Scenario:Buy Property Detail Page - functionality of Video Tour button which navigate to arrange site visit form on the hero image
-        When I should see the "hero Image" modal on the page
+        When I should see the "hero Image" on the "page"
         And I click on the "video Tour" on the "hero image"
-        Then I should see the "image" modal on the page
+        Then I should see the "image Modal" on the "page"
         When I click on the "arrange Site Visit" on the "image modal"
         When I fill "data" on the "name Input Field" on the "image modal"
         And I fill "random number" on the "number Input Field" on the "image modal"
@@ -70,15 +70,15 @@ Feature: Property Detail Page
         And I select "time" from "choose time select field" on the "image modal"
         And I check the "accept the term checkbox" on the "image modal"
         And I check the "homeloans checkbox" on the "image modal"
-        And I click on the "arrange Visit" button on the image modal
+        And I click on the "arrange Visit" on the "image modal"
         Then I should see the "OTP Modal" on the "page"
 
     # //-------------------------------------------------------------------------------------------------------------------------
      @regression @buyPDPPage-07 @automated
     Scenario:Buy Property Detail Page - functionality of Street View button which navigate to arrange site visit form on the hero image
-        When I should see the "hero Image" modal on the page
+        When I should see the "hero Image" on the "page"
         And I click on the "street View Text" on the "hero image"
-        Then I should see the "image" modal on the page
+        Then I should see the "image Modal" on the "page"
         When I click on the "arrange Site Visit" on the "image modal"
         When I fill "data" on the "name Input Field" on the "image modal"
         And I fill "random number" on the "number Input Field" on the "image modal"
@@ -93,9 +93,9 @@ Feature: Property Detail Page
     # //---------------------------------------------------------------------------------------------------------------------------
     @regression @buyPDPPage-08 @automated
     Scenario:Buy Property Detail Page - functionality of Images button which navigate to arrange site visit form on the hero image
-        When I should see the "hero Image" modal on the page
+        When I should see the "hero Image" on the "page"
         And I click on the "images Text" on the "hero image"
-        Then I should see the "image" modal on the page
+        Then I should see the "image Modal" on the "page"
         When I click on the "arrange Site Visit" on the "image modal"
         When I fill "data" on the "name Input Field" on the "image modal"
         And I fill "random number" on the "number Input Field" on the "image modal"
@@ -105,7 +105,7 @@ Feature: Property Detail Page
         And I check the "accept the term checkbox" on the "image modal"
         And I check the "homeloans checkbox" on the "image modal"
         And I click on the "arrange Visit" on the "image modal"
-        Then I should see the "OTP Modal" on the page
+        Then I should see the "OTP Modal" on the "page"
 
     # //------------------------------------------------------------------------------------------------------------------------------
     @regression @buyPDPPage-08 @automated
@@ -295,9 +295,9 @@ Feature: Property Detail Page
         And I click on the "post Review Button" on the "rating and review modal"
         And I fill "data" on the "name input field" on the "modal"
         And I click on the "post Now" on the "rating and review modal"
-        And I should see the "thank You" modal on the page
+        And I should see the "thank You Modal" on the "page"
         When I click on the "close Button"
-        Then I should not see the "thank You" on the page
+        Then I should not see the "thank You Modal" on the page
 
         Examples:
             | userType          |
@@ -336,11 +336,11 @@ Feature: Property Detail Page
         When I click on the "FAQ" tab on the header
         When I navigate to the "question Section"
         Then I click on the "have Any Questions? Ask us..." on the "section"
-        Then I should see the "question" modal on the page
+        Then I should see the "question" on the "page"
         When I fill "test question" on the "question Field" on the "page"
         And I click on the "<tab>" on the "ques" section
         And I click on the "ask Question Button"
-        Then I should see the "thank You" modal on the page
+        Then I should see the "thank You Modal" on the "page"
 
         Examples:
             | tab                         |
