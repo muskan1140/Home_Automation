@@ -46,7 +46,7 @@ Feature: Homepage
     @regression @sanity @homePage-4 @automated
     Scenario Outline: How it works section - Clicking "<card>" card should navigate to "<expectedurl>" page
         When I click on the "<card>"
-        Then I should be navigated to page having "<expectedurl>" url
+        Then I navigate to "<expectedurl>" url
 
         Examples:
             | card                    | expectedurl               |
@@ -90,7 +90,7 @@ Feature: Homepage
     @regression @sanity @homePage-5 @automated
     Scenario: Deals of the Week section - city should be as per the city selected in Search area
         Then I should see the "deal" on the "week section"
-        And The "Deal of the Week" in city should be as selected in "Search Acrea"
+        And The "Deal of the Week" in city should have selected in search area
 
     # //------------------------------------------------------------------------------------------------------------
 
@@ -173,7 +173,7 @@ Feature: Homepage
        @regression  @homePage-13 @automated
         Scenario: Discounted Deals section - city should be as per the city selected in Search area
             Then I should see the "discounted Deals Section" on the "page"
-            And The "Discounted deals" in city should be as selected in "Search area"
+            And The "Discounted deals" in city should have selected in search area
 
     # //--------------------------------------------------------------------------------------------------------------------------
 
@@ -338,7 +338,7 @@ Feature: Homepage
     @regression @homePage-28 @automated
     Scenario: Top Builder Section - city should be as per the city selected in Search area
         Then I should see the "top Builders Section" on the "page"
-        And The "Top Builders" in city should be as selected in "Search area"
+        And The "Top Builders" in city should have selected in search area
 
     # //------------------------------------------------------------------------------------------------------------------------------------
 

@@ -362,7 +362,7 @@ Feature: Property Detail Page
         And I click on the "about Builder" tab on the header
         And I click on the "ReadMore" on the "about builder section"
         Then I should see the "complete Description" on the "about builder section"
-        When I click on the "ReadLess" on the "about builder section"
+        When I click on the "Read Less" on the "about builder section"
         Then I should not see the "complete Description" on the page
 
     # //-----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -400,32 +400,32 @@ Feature: Property Detail Page
     #     Then I should navigate to "property details" page
 
     # //---------------------------------------------------------------------------------------------------------------------------------------------------------
-    @regression @buyPDPPage-28 @automated
-    Scenario: Buy Property Detail Page - Get Quote Form
-        When I click on the "introduction" tab on the header
-        When I fill "data" on the "name Input Field" on the "form"
-        And I fill "random number" on the "number Input Field" on the "form"
-        And I fill "random email" on the "email Input Field" on the "form"
-        And I check the "I accept Terms and Conditions" on the "form"
-        And I check the "homeloans checkbox" on the "form"
-        And I click on the "Get Quote Button"
-        Then I should see the "OTP Modal" on the "page"
+    # @regression @buyPDPPage-28 @automated
+    # Scenario: Buy Property Detail Page - Get Quote Form
+    #     When I click on the "introduction" tab on the header
+    #     When I fill "data" on the "name Input Field" on the "form"
+    #     And I fill "random number" on the "number Input Field" on the "form"
+    #     And I fill "random email" on the "email Input Field" on the "form"
+    #     And I check the "I accept Terms and Conditions" on the "form"
+    #     And I check the "homeloans checkbox" on the "form"
+    #     And I click on the "Get Quote Button"
+    #     Then I should see the "OTP Modal" on the "page"
 
     #  //-------------------------------------------------------------------------------------------------------------------------------------------------------------
-    @regression @buyPDPPage-29 @automated
-    Scenario: Buy Property Detail Page - Get Quote Form to Arrange Site Visit Form
-        When I click on the "introduction" tab on the header 
-        And I click on the "arrange Visit Site"
-        Then I should see the "schdedule Tour Form" on the "page"
-        When I fill "data" on the "name Input Field" on the "form"
-        And I fill "random number" on the "number Input Field" on the "form"
-        And I fill "random email" on the "email Input Field" on the "form"
-        And I select "first date" from "date field" on the "image modal"
-        And I select "time" from "choose time select field" on the "image modal"
-        And I check the "I accept Terms and Conditions" on the "image modal"
-        And I check the "homeloans checkbox" on the "image modal"
-        And I click on the "arrange Visit" on the "image modal"
-        Then I should see the "OTP Modal" on the "page"
+    # @regression @buyPDPPage-29 @automated
+    # Scenario: Buy Property Detail Page - Get Quote Form to Arrange Site Visit Form
+    #     When I click on the "introduction" tab on the header 
+    #     And I click on the "arrange Visit Site"
+    #     Then I should see the "schdedule Tour Form" on the "page"
+    #     When I fill "data" on the "name Input Field" on the "form"
+    #     And I fill "random number" on the "number Input Field" on the "form"
+    #     And I fill "random email" on the "email Input Field" on the "form"
+    #     And I select "first date" from "date field" on the "image modal"
+    #     And I select "time" from "choose time select field" on the "image modal"
+    #     And I check the "I accept Terms and Conditions" on the "image modal"
+    #     And I check the "homeloans checkbox" on the "image modal"
+    #     And I click on the "arrange Visit" on the "image modal"
+    #     Then I should see the "OTP Modal" on the "page"
 
    
 

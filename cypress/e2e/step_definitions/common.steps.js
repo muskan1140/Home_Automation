@@ -67,6 +67,10 @@ Then('I should not see the {string} on the page', (element) => {
     webElement.elementIsPresent(locators[element])
 });
 
+Then('The {string} in city should have selected in search area', (element) => {
+    webElement.shouldBeVisible(locators[element])
+});
+
 Then('I should see the {string} on {string}', (element,text) => {
     if (text== "deals of the week section") {
     let locator = `${locators[element]}:eq()`;

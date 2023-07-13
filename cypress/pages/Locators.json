@@ -7,7 +7,7 @@
     "configuration":"div .property-project-name .MuiTypography-root:first()",
     "starting Price":"div .property-project-name .MuiTypography-root:eq(1)",
     "carpet Area":"div .property-project-name .MuiTypography-root:last()",
-    "shortlist Property Icon":"[style='cursor: pointer; padding-right: 10px;']:first()",
+    "shortlist Property Icon":"div [style='cursor: pointer; padding-right: 10px;']:first()",
     "share Icon":"[style='cursor: pointer; padding-right: 10px;']:last()",
     "social Media Icon Modal":"[style='padding: 10px; background-color: white; border-radius: 10px;']",
     "hero Image":"[title='Elevation Image Lodha Codename Premier']:first()",
@@ -39,7 +39,6 @@
     "get Best Quote":"div .MuiButton-label:last()",
     "Get Cost Sheet button":"div .costsheet-container",
     "get Cost Sheet":"div .MuiButton-label:last()",
-    "Locality":"div .stickyMenu_blueIndicator__9o6DS:contains('Locality')",
     "map":"div #direction-example",
     "bank offer section":"div .sectionbankwap",
     "bank Logo" : "div .sectionBank",
@@ -84,7 +83,6 @@
     "about Builder":"div .stickyMenu_blueIndicator__9o6DS:contains('About')",
     "ReadMore":"[data-cy='read-more-read-less-btn']:last()",
     "complete Description":"div .overviewBox .MuiGrid-container:last()",
-    "ReadLess":" div [data-cy='read-more-read-less-btn']:contains('Read Less')",
     "more Projects Section":"div .MuiGrid-root:contains('More Projects'):last()",
     "view All Button":"div .MuiGrid-grid-sm-8 div .view-all-details",
     "left Arrow" : "div .overview-section div [style='margin: 4px;']",
@@ -238,5 +236,8 @@
     "Mumbai":"div [data-cy='header-dropdown-container']:last()",
     "city Type":"div .headerDropdown_option__4whZg",
     "rent PropertyType":"div .headerDropdown_option__4whZg:contains('Rent')",
-    "search Input":"#search-input-div"
+    "search Input":"#search-input-div",
+    "project Location":"div .MuiTypography-root:eq(2)",
+    "heroImage":"div img:eq(19)",
+    "about Property Tab":"div .stickyMenu_blueIndicator__9o6DS:eq(1)"
 }
